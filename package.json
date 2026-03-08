@@ -1,0 +1,29 @@
+{
+  "name": "playrooms-dp-dglab-ble",
+  "version": "1.0.0",
+  "description": "PlayRooms Device Provider — DG-LAB Coyote e-stim via direct Bluetooth LE",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "lint": "eslint src --ext .ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "playrooms",
+    "device-provider",
+    "dglab",
+    "coyote",
+    "estim",
+    "bluetooth",
+    "ble"
+  ],
+  "author": "troon4891",
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {}
+}
