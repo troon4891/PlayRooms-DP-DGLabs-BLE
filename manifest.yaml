@@ -1,0 +1,46 @@
+name: dglab-ble
+displayName: "DG-LAB Coyote (Bluetooth LE)"
+version: "1.0.0"
+type: device-provider
+description: "Control DG-LAB Coyote e-stim devices via direct Bluetooth Low Energy — no mobile app bridge needed"
+author: "PlayRooms"
+license: "MIT"
+providerApiVersion: 1
+
+requirements:
+  bluetooth: true     # REQUIRED — direct BLE connection to Coyote hardware
+  serial: false
+  network: false      # No network dependency — BLE transport only
+
+settings:
+  scanTimeout:
+    type: number
+    label: "Scan Timeout (ms)"
+    description: "How long to scan for Coyote devices before stopping"
+    default: 15000
+  logLevel:
+    type: select
+    label: "Log Level"
+    options: [debug, info, warn, error]
+    default: "info"
+
+aiInteraction:
+  allowed: true
+  defaultEnabled: false
+  safetyNote: "E-stim devices require explicit host opt-in for AI control. AI intensity caps default to 50% of device maximum."
+
+riskFlags:
+  - type: "electrical-stimulation"
+    severity: high
+    description: "Controls e-stim devices that deliver electrical impulses. Improper use can cause burns, muscle injury, or cardiac events. Read SAFETY.md before use."
+  - type: "requires-physical-safety-gear"
+    severity: medium
+    description: "Users should have physical access to the device's power button or be able to remove electrodes immediately as a hardware-level fallback."
+
+# NOTE: No "network-dependent" risk flag — unlike the WS variant, a BLE disconnect
+# immediately stops the Coyote at the hardware level. There is no relay layer that
+# could continue driving the device after a connection loss.
+
+deviceLimits:
+  maxCommandRate: 10
+  coalescingStrategy: "latest-wins"
