@@ -4,7 +4,7 @@ version: "1.0.0"
 type: device-provider
 description: "Control DG-LAB Coyote e-stim devices via direct Bluetooth Low Energy — no mobile app bridge needed"
 author: "PlayRooms"
-license: "MIT"
+license: "Apache-2.0"
 providerApiVersion: 1
 
 requirements:

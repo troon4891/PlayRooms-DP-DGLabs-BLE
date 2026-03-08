@@ -1,6 +1,6 @@
 # PlayRooms — DG-LAB Coyote BLE Device Provider
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 
 > ⚠️ **Safety Warning:** This plugin controls electrical stimulation hardware.
 > Read [SAFETY.md](./SAFETY.md) before use. E-stim is contraindicated for people with
@@ -188,6 +188,6 @@ Protocol reference: `DG-LAB-OPENSOURCE/coyote/v3/README_V3.md`
 
 ## License
 
-MIT — see [LICENSE](./LICENSE).
+Apache 2.0 — see [LICENSE](./LICENSE).
 
 Third-party attributions: see [NOTICE.md](./NOTICE.md).

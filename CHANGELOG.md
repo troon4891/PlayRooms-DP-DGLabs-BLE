@@ -60,8 +60,6 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ### Notes
 
-- LICENSE file contains MIT license (not Apache 2.0). All manifest and documentation
-  references use MIT accordingly.
 - No runtime dependencies in this milestone — `dependencies: {}` in package.json.
   BLE library choice (e.g., `@abandonware/noble`) deferred to Milestone 5.
 - ProviderInterface compliance not verifiable until Milestone 5 implementation.
