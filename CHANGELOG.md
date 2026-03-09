@@ -5,6 +5,18 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [1.0.1] — 2026-03-09 — License Correction
+
+### Fixed
+
+- **`LICENSE`** — Replaced auto-generated GitHub MIT license with the correct
+  Apache License 2.0. Copyright holder updated to "Copyright 2026 PlayRooms".
+
+- **`manifest.yaml`** — Updated `license` field from `"MIT"` to `"Apache-2.0"`
+  to match the actual license file.
+
+---
+
 ## [1.0.0] — 2026-03-08 — Milestone 1: Project Scaffold
 
 ### Added
@@ -60,8 +72,6 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ### Notes
 
-- LICENSE file contains MIT license (not Apache 2.0). All manifest and documentation
-  references use MIT accordingly.
 - No runtime dependencies in this milestone — `dependencies: {}` in package.json.
   BLE library choice (e.g., `@abandonware/noble`) deferred to Milestone 5.
 - ProviderInterface compliance not verifiable until Milestone 5 implementation.
